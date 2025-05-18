@@ -178,7 +178,7 @@ header nav ul a {
 /* End main page */
 /* Start Dessert */
 .main-page .desserts {
-  flex-basis: 75%;
+  flex: 1;
 }
 
 @media (max-width:991px) {
@@ -194,7 +194,6 @@ header nav ul a {
 }
 
 .main-page .desserts .card {
-  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -204,6 +203,46 @@ header nav ul a {
 
 .main-page .desserts .img img {
   width: 100%;
+  border-radius: 10px;
+}
+
+.main-page .desserts .add-btn {
+  display: flex;
+  position: relative;
+  width: 135px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 15px;
+  background-color: white;
+  border: 1px solid var(--Rose-400);
+  border-radius: 60px;
+  font-weight: 700;
+  margin: -20px auto 5px auto;
+  transition-duration: .3s;
+  cursor: pointer;
+}
+
+.main-page .desserts .add-btn:hover {
+  background-color: var(--Rose-100);
+}
+
+.main-page .added .add-btn {
+  background-color: var(--Red);
+  color: white;
+  cursor: default;
+}
+
+.main-page .added .add-btn:hover {
+  background-color: var(--Red);
+}
+
+.main-page .desserts .add-btn img {
+  width: 20px;
+}
+
+.main-page .added .add-btn img {
+  width: 12px;
+  cursor: pointer;
 }
 
 .main-page .desserts .card-body {
@@ -225,30 +264,99 @@ header nav ul a {
 }
 
 /* End Dessert */
-.main-page .chart {
-  flex-basis: 25%;
-  padding: 15px;
+.main-page .Cart {
+  flex-basis: 375px;
+  padding: 20px;
   background-color: white;
   border-radius: 6px;
 }
 
 @media (max-width:991px) {
-  .main-page .chart {
+  .main-page .Cart {
     flex-basis: 100%;
   }
 }
 
-.main-page .chart .chart-title {
+.main-page .Cart .Cart-title {
   margin-bottom: 20px;
   color: var(--Red);
   font-weight: bold;
 }
 
-.main-page .chart.empty .chart-img,
-.main-page .chart.empty .chart-body p {
+.main-page .Cart .Cart-img,
+.main-page .Cart .Cart-body p {
   text-align: center;
 }
 
-.main-page .chart.empty .chart-body p {
+.Cart-body .product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.Cart .details h5 {
+  margin-bottom: 10px;
+}
+
+.Cart .Cart-body .total-price {
   color: var(--Rose-500);
+  font-weight: 500;
+  font-size: 14px;
+}
+.Cart .details .quant {
+  color: var(--Red);
+  font-weight: 600;
+}
+
+.Cart .details .price {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--Rose-300);
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.Cart .product .delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  border: 2px solid var(--Rose-300);
+  cursor: pointer;
+}
+
+.Cart .order {
+  margin-top: 30px;
+}
+
+.Cart .order span {
+  font-size: 14px;
+}
+
+.Cart .order .bill {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.submit {
+  display: block;
+  margin-top: 30px;
+  padding: 15px;
+  border: none;
+  text-align: center;
+  width: 100%;
+  background-color: var(--Red);
+  color: white;
+  border-radius: 100px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.submit:hover {
+  background-color: rgb(175 46 7);
 }
