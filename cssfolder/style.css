@@ -102,6 +102,12 @@ header .nav-logo a,
 header nav ul a {
   color: var(--Red);
   font-weight: bold;
+  transition-duration: 0.3s;
+}
+
+:is(header .nav-logo a,nav ul a):hover {
+  background-color: hsl(14deg 25% 72% / 40%);
+  border-radius: 6px;
 }
 
 .nav-icon {
@@ -206,6 +212,10 @@ header nav ul a {
   border-radius: 10px;
 }
 
+.main-page .added .img img {
+  border: 2px solid var(--Red);
+}
+
 .main-page .desserts .add-btn {
   display: flex;
   position: relative;
@@ -240,9 +250,24 @@ header nav ul a {
   width: 20px;
 }
 
-.main-page .added .add-btn img {
-  width: 12px;
+:is(.minus,.plus) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition-duration: 0.3s;
   cursor: pointer;
+}
+
+:is(.minus,.plus):hover {
+  background-color: white;
+}
+
+:is(.minus,.plus):hover svg path {
+  fill: var(--Red);
 }
 
 .main-page .desserts .card-body {
@@ -250,8 +275,8 @@ header nav ul a {
 }
 
 .main-page .desserts .card .category {
-    font-size: 14px;
-    color: #7e7e7e;
+  font-size: 14px;
+  color: #7e7e7e;
 }
 .main-page .desserts .card .name {
   font-weight: 500;
@@ -327,7 +352,20 @@ header nav ul a {
   height: 20px;
   border-radius: 100px;
   border: 2px solid var(--Rose-300);
+  transition-duration: .3s;
   cursor: pointer;
+}
+
+.Cart .product .delete-btn:hover {
+  border-color: var(--Rose-900);
+}
+
+.Cart .product .delete-btn svg path {
+  transition-duration: 0.3s;
+}
+
+.Cart .product .delete-btn:hover svg path {
+  fill: var(--Rose-900);
 }
 
 .Cart .order {
@@ -343,10 +381,23 @@ header nav ul a {
   font-size: 24px;
 }
 
+.Cart .neutral {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 20px 0;
+  font-size: 13px;
+}
+
+.Cart .neutral .carbon {
+  font-weight: bold;
+}
+
 .submit {
   display: block;
-  margin-top: 30px;
   padding: 15px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
   border: none;
   text-align: center;
   width: 100%;
