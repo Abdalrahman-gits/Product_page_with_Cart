@@ -60,6 +60,10 @@ body {
   background-color: var(--Rose-100);
 }
 
+body.modal-opened {
+  overflow: hidden;
+}
+
 .container  {
   margin-left: auto;
   margin-right: auto;
@@ -86,6 +90,38 @@ body {
   .container {
     width: 1140px;
   }
+}
+
+.details .quant {
+  color: var(--Red);
+  font-weight: 600;
+}
+
+.details .price {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--Rose-300);
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.main-btn {
+  display: block;
+  padding: 15px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  border: none;
+  text-align: center;
+  width: 100%;
+  background-color: var(--Red);
+  color: white;
+  border-radius: 100px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.main-btn:hover {
+  background-color: rgb(175 46 7);
 }
 
 /* Start Navbar */
@@ -331,18 +367,6 @@ header nav ul a {
   font-weight: 500;
   font-size: 14px;
 }
-.Cart .details .quant {
-  color: var(--Red);
-  font-weight: 600;
-}
-
-.Cart .details .price {
-  font-weight: 500;
-  font-size: 14px;
-  color: var(--Rose-300);
-  margin-left: 10px;
-  margin-right: 5px;
-}
 
 .Cart .product .delete-btn {
   display: flex;
@@ -393,21 +417,59 @@ header nav ul a {
   font-weight: bold;
 }
 
-.submit {
-  display: block;
-  padding: 15px;
-  font-weight: 600;
-  letter-spacing: 1.1px;
-  border: none;
-  text-align: center;
+/* Modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
   width: 100%;
-  background-color: var(--Red);
-  color: white;
-  border-radius: 100px;
-  cursor: pointer;
-  transition-duration: 0.3s;
+  height: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 50%);
 }
 
-.submit:hover {
-  background-color: rgb(175 46 7);
+.modal-content {
+  border-radius: 10px;
+  background-color: white;
+  width: 50%;
+  height: 70%;
+  overflow-y: auto;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal .order-done {
+  padding: 20px;
+  background-color: var(--Rose-100);
+  border-radius: 6px;
+}
+
+.modal .item {
+  align-items: center;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal .item img {
+  margin-right: 10px;
+  width: 45px;
+  border-radius: 6px;
+}
+
+.modal .item .total-price {
+  margin-left: auto;
+  font-weight: 500;
+}
+
+@media (max-width:767px) {
+  .modal-content {
+    align-self: flex-end;
+    width: 100%;
+  }
 }

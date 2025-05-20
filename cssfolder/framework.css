@@ -158,6 +158,10 @@
   margin-top: 25px;
 }
 
+.mt-30 {
+  margin-top: 30px;
+}
+
 .mr-5 {
   margin-right: 5px;
 }
@@ -195,6 +199,10 @@
 
 .mb-25 {
   margin-bottom: 25px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
 }
 
 .ml-5 {
@@ -294,6 +302,10 @@
 
 .fs-22 {
   font-size: 22px;
+}
+
+.fs-24 {
+  font-size: 24px;
 }
 
 .fs-25 {
