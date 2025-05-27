@@ -436,17 +436,18 @@ header nav ul a {
   background-color: white;
   width: 50%;
   height: 70%;
-  overflow-y: auto;
-}
-
-.modal-content::-webkit-scrollbar {
-  width: 8px;
 }
 
 .modal .order-done {
   padding: 20px;
   background-color: var(--Rose-100);
   border-radius: 6px;
+  height: 250px;
+  overflow-y: auto;
+}
+
+.modal .order-done::-webkit-scrollbar {
+  display: none;
 }
 
 .modal .item {
