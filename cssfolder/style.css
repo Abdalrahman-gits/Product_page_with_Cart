@@ -471,8 +471,12 @@ header nav ul a {
 @media (max-width:767px) {
   .modal-content {
     width: 100%;
+    height: 62%;
     align-self: flex-end;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+  }
+  .modal .order-done {
+    height: 150px;
   }
 }
